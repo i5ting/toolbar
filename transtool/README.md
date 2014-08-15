@@ -11,56 +11,50 @@ Download the [production version][min] or the [development version][max].
 In your web page:
 
 	.en {
-		display:none;
+		display:block;
 	}
 	
 	.zh {
 		display:none;
 	}
-	
-	.review {
-		display:block;
-		border: 1px solid lightblue;
-		padding:25px;
-	}
-	
-	.ok {
-		display:block;
-		border: 1px solid lightgreen;
-		padding:5px;
-	}
-	
-	.todo {
-		display:block;
-		border: 1px dashed red;
-		padding:15px;
-	}
+
 	
 ```html
 	<script src="jquery.js"></script>
 	<script src="dist/transtool.min.js"></script>
 	<script>
 	jQuery(function($) {
-	  $.transtool({
-			
-			states:{
-		  	en:{
-	  		
-		  	},
-				zh:{
-				
-				},
-				review:{
-				
+		
+		$.transtool({
+			toolbarselector:"#normal-button",
+			content: '#user-options', 
+			position: 'top',
+			states:[
+				{
+					'zh':{
+						'icon':'icon-edit',
+						click:function(){
+							alert('zh111');
+						}
+					},
+					'en':{
+						'icon':'icon-user',
+						click:function(){
+							alert('en');
+						}
+					}
 				}
-	  	}
-		}); // "awesome"
+			]
+		});
+		
 	});
 	</script>
 ```
 
 ## Documentation
-_(Coming soon)_
+
+
+
 
 ## Examples
 _(Coming soon)_
@@ -69,3 +63,8 @@ _(Coming soon)_
 
 ## Release History
 _(Nothing yet)_
+
+
+
+- v0.1.0
+	- 把toolbar.js和transtool打包在一起,增加使用文档。

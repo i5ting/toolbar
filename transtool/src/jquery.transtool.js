@@ -23,7 +23,7 @@
 		
 		var optsion_html = "<div id='user-options' class='toolbar-icons' style='display: none;'>";
 		
-		$.each(opts.states,function(i){
+		$.each(opts.states,function(){
 			$.each(this,function(key,value){
 					optsion_html += "<a id='" + key + "' href='#'><i class='" + value.icon + "'></i></a>";
 					$('#'+key).on('click',value.click);
@@ -39,7 +39,7 @@
 	}
 	
 	function bind_click_event(opts){
-		$.each(opts.states,function(i){
+		$.each(opts.states,function(){
 			$.each(this,function(key,value){
 					$('#'+key).on('click',value.click);
 			});
@@ -59,7 +59,7 @@
   // Static method.
   $.transtool = function(options) {
     // Override default options with passed-in options.
-    opts = $.extend({},$.fn.toolbar.options, $.transtool.options, options);
+    var opts = $.extend({},$.fn.toolbar.options, $.transtool.options, options);
     
 		// 创建tooltip‘s options html
 		create_tip_opts(opts);
@@ -71,13 +71,7 @@
 		render_tip_with_opts(opts);
   };
 
-	/**
-	 * 日志方法
-	 */
-	function log(text){
-		if($.transtool.options.debug == true)
-			console.log(text);
-	}
+
 	
   // Static method default options.
   $.transtool.options = {
@@ -110,6 +104,15 @@
 	//   };
 	//
 
+	/**
+	 * 日志方法
+	 */
+	function log(text){
+		if($.transtool.options.debug === true){
+			console.log(text);
+		}
+	}
+	
   // Custom selector.
   $.expr[':'].transtool = function(elem) {
     // Is this element awesome?

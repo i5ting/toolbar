@@ -24,8 +24,8 @@
 
 		<script src="../libs/jquery-loader.js"></script>
 
-		<script src="js/jquery.toolbar.js"></script>
-		<script src="../src/jquery.transtool.js"></script>
+
+		<script src="../dist/jquery.transtool.min.js"></script>
 
 		<script type="text/javascript">
 			jQuery(document).ready(function($) {
@@ -42,29 +42,9 @@
 				// $('#button-right').toolbar({content: '#user-options', position: 'right'});
 				// $('#link-toolbar').toolbar({content: '#user-options', position: 'top' });
 				//
-			$.transtool({
-				toolbarselector:"#normal-button",
-				content: '#user-options', 
-				position: 'top',
-				states:[
-					{
-						'zh':{
-							'icon':'icon-edit',
-							click:function(){
-								alert('zh111');
-							}
-						},
-						'en':{
-							'icon':'icon-user',
-							click:function(){
-								alert('en');
-							}
-						}
-					}
-				]
-		
-			});
+			$.transtool({toolbarselector:"#normal-button",content: '#user-options', position: 'top'});
 			
+		
 			});
 		</script>
 	</head>

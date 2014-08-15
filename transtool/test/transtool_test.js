@@ -27,31 +27,31 @@
     }
   });
 
-  test('is chainable', function() {
-    expect(1);
-    // Not a bad test to run on collection methods.
-    strictEqual(this.elems.transtool(), this.elems, 'should be chainable');
-  });
-
-  test('is awesome', function() {
-    expect(1);
-    strictEqual(this.elems.transtool().text(), 'awesome0awesome1awesome2', 'should be awesome');
-  });
-
-  module('jQuery.transtool');
-
-  test('is awesome', function() {
-    expect(2);
-    strictEqual($.transtool(), 'awesome.', 'should be awesome');
-    strictEqual($.transtool({punctuation: '!'}), 'awesome!', 'should be thoroughly awesome');
-  });
-
-  module(':transtool selector', {
-    // This will run before each test in this module.
-    setup: function() {
-      this.elems = $('#qunit-fixture').children();
-    }
-  });
+  // test('is chainable', function() {
+//     expect(1);
+//     // Not a bad test to run on collection methods.
+//     strictEqual(this.elems.transtool(), this.elems, 'should be chainable');
+//   });
+//
+//   test('is awesome', function() {
+//     expect(1);
+//     strictEqual(this.elems.transtool().text(), 'awesome0awesome1awesome2', 'should be awesome');
+//   });
+//
+//   module('jQuery.transtool');
+//
+//   test('is awesome', function() {
+//     expect(2);
+//     strictEqual($.transtool(), 'awesome.', 'should be awesome');
+//     strictEqual($.transtool({punctuation: '!'}), 'awesome!', 'should be thoroughly awesome');
+//   });
+//
+//   module(':transtool selector', {
+//     // This will run before each test in this module.
+//     setup: function() {
+//       this.elems = $('#qunit-fixture').children();
+//     }
+//   });
 
   test('is awesome', function() {
     expect(1);
