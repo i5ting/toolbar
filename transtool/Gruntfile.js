@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: '<%= concat.dist.dest %>',
-        dest: 'dist/jquery.<%= pkg.name %>.min.js'
+        dest: '../../tocmd.gem/vendor/toc/js/jquery.<%= pkg.name %>.min.js'
       },
     },
     qunit: {
